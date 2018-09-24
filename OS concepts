@@ -1,0 +1,9 @@
+# OS concepts
+
+**Mutual exclusion of Resources**: There must be at least one resource that cannot be used by more than one process at a time.
+
+**Hold and wait ability of Process**: A process that is holding a resource can request for additional resources that are being held by other processes in the system.
+
+**No preemption condition**: A resource cannot be forcibly taken from a process. Only the process can release a resource that is being held by it.
+
+**Circular wait condition**: A condition where one process is waiting for a resource that is being held by second process and second process is waiting for third process ….so on and the last process is waiting for the first process. Thus making a circular chain of waiting
