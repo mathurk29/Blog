@@ -1,0 +1,148 @@
+[Image Convolution - Machine Learning Guru](http://machinelearninguru.com/computer_vision/basics/convolution/image_convolution_1.html)
+
+NDArray
+```python
+>>> x = np.array([[1, 2, 3], [4, 5, 6]], np.int32)
+>>> type(x)
+<type 'numpy.ndarray'>
+>>> x.shape
+(2, 3)
+>>> x.dtype
+dtype('int32')
+```
+
+ndarray can be a view to another ndarray.
+
+```python
+>>> y = x[:,1]
+>>> y
+array([2, 5])
+>>> y[0] = 9 # this also changes the corresponding element in x
+>>> y
+array([9, 5])
+>>> x
+array([[1, 9, 3],
+       [4, 5, 6]])
+```
+
+
+[*args and **kwargs in Python - GeeksforGeeks](https://www.geeksforgeeks.org/args-kwargs-python/)
+
+kwargs is nothing but variable no of args of type KVP.
+
+__weight = kernel = filter__
+
+depth = no of channel
+
+The __activation map__ is the output of the convolution layer.
+
+no. of filters = depth of activation map
+
+<img src="https://image.ibb.co/nEnnGy/image.png" alt="image" border="0">
+
+[Understanding of Convolutional Neural Network (CNN) — Deep Learning](https://medium.com/@RaghavPrabhu/understanding-of-convolutional-neural-network-cnn-deep-learning-99760835f148)
+
+Pooling/Subsampling/Downsampling= reduce dim of input. Ex: max pooling/avg pooling/sum pooling/L2 norm pooling.
+
+Extracting features = create a new img that has only particular attribute(s). For ex : edge detection
+
+Diff channels of kernel can have diff definitions(value in the matrix)
+
+ReLU stands for Rectified Linear Unit for a non-linear operation.  ReLU’s purpose is to introduce non-linearity in our NN. Better than tanh and sigmoid.
+
+
+<img src="https://image.ibb.co/fJeJ8d/image.png" alt="image" border="0">
+
+Summary
+
+- Provide input image into convolution layer
+- Choose parameters, apply filters with strides, padding if requires. Perform convolution on the image and apply ReLU activation to the matrix.
+- Perform pooling to reduce dimensionality size
+- Add as many convolutional layers until satisfied
+- Flatten the output and feed into a fully connected layer (FC Layer)
+- Output the class using an activation function (Logistic Regression with cost functions) and classifies images
+
+__Hyperparametes:__
+- the kernel size
+- the filter count (that is, how many filters do we want to use)
+- stride (how big are the steps of the filter)
+- padding
+
+
+
+
+
+![1*_34EtrgYk6cQxlJ2br51HQ.gif](https://cdn-images-1.medium.com/max/1600/1*_34EtrgYk6cQxlJ2br51HQ.gif)
+How convolution works with K = 2 filters, each with a spatial extent F = 3 , stride, S = 2, and input padding P = 1. 
+
+
+
+## Masking
+
+__Mask = filter = spatial filtering = convolving a mask with an image = convolution masks__
+
+1. Linear (= Smoothing ) filters
+2. Freq domain filters
+
+The common masks for blurring are.
+1. Box filter
+2. Weighted average filter
+
+The common type of filters that are used to perform blurring are.
+
+1. Mean filter 
+2. Weighted average filter
+3. Gaussian filter
+
+Mean filter-
+1/9	1/9	1/9
+1/9	1/9	1/9
+1/9	1/9	1/9
+
+Weighted avg filter-
+Properties of the weighted average filter are.
+
+It must be odd ordered
+The sum of all the elements should be 1
+The weight of center element should be more then all of the other elements
+1	1	1
+1	2	1
+1	1	1
+
+Here are some of the masks for edge detection that we will discuss in the upcoming tutorials.
+
+1. Prewitt Operator
+2. Sobel Operator
+3. Robinson Compass Masks
+4. Krisch Compass Masks
+5. Laplacian Operator.
+
+
+CNN - Image Recognition
+LSTM - speech recognition
+
+__Neuron - a variable that holds a number between 0 and 1 
+Activation - no inside neuron
+Neuron lights up when activation is a high no.__
+
+<img src="https://image.ibb.co/kVa7BK/image.png" alt="image" border="0">
+
+
+__These 784 neurons makes the first layer of our neurons__
+
+<img src="https://image.ibb.co/gXUndz/image.png" alt="image" border="0">
+
+The last layer has 10 neurons each with activation that tells the prob of that neuron to be the answer.
+
+<img src="https://image.ibb.co/fdfM5e/image.png" alt="image" border="0">
+
+<br>
+
+
+__Learning = finding which weights and bias best minimises the Cost Function__
+
+<img src="https://image.ibb.co/iBsW6K/image.png" alt="image" border="0">
+
+Cost is sq.(Actual Prob - Exp Prb) summed for each possible O/P for all tens of thousands of data in training set.
+
+
