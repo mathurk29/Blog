@@ -1,0 +1,179 @@
+# Angular 
+
+Dependency Injection
+
+  AngularJS is not completely MVC; the controller will never have a direct reference
+  to the view. This is great because it keeps the controller independent of
+  the view, and also allows us to easily test the controller without needing to
+  instantiate a DOM.
+
+  It makes for super easy testing because we can replace heavy dependencies with
+  nicer mocks for testing. So instead of passing an HttpService that talks to the
+  real server, we pass in a MockHttpService that talks to a server created in
+  memory. 
+
+Interact with backend using: XHR (XML HTTP requests) or sockets.
+
+``` html
+<html ng-app>
+<body>
+<h1>Hello {{1 + 2}}</h1>
+<script
+src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js">
+</script>
+</body>
+
+```
+
+
+Modules are AngularJS’s
+way of packaging relevant code under a single name. For someone coming
+from a Java background, a simple analogy is to think of modules as packages.
+
+
+An AngularJS module has two parts to it:
+• A module can define its own controllers, services, factories, and directives. These
+are functions and code that can be accessed throughout the module.
+• The module can also depend on other modules as dependencies, which are defined
+when the module is instantiated. What this means is that AngularJS will go and find
+the module with that particular name, and ensure that any functions, controllers,
+services, etc. defined in that module are made available to all the code defined in
+this module.
+
+This is how we define a module named notesApp:
+
+```html
+angular.module('notesApp', []);
+```
+The first argument to the module function in AngularJS is the name of the module. Here,
+we define a module named notesApp. The second argument is an array of module
+names that this module depends on. Do note the empty square brackets we pass as the
+second argument to the function. This tells AngularJS to create a new module with the
+name notesApp, with no dependencies.
+
+Make sure the file that defines the module is
+loaded first in your HTML before you try to use it.
+
+Component = Tempelate +   Class (prop + methods) + metadata
+
+![6da4b109.png](D:\online\attachments\ee469f2e-d8b6-4a10-a8aa-607991cb5e2d\6da4b109.png)
+
+{{}}  - binding exp in ng
+
+
+## Controller 
+
+ - They are nothing but JavaScript functions that perform or trigger the majority of our UI-oriented work. 
+ - ng calls them, we don't.
+ - It builds the model by fetching data from UI/database. 
+ Some of the common responsibilities of a controller in an AngularJS application include:
+• Fetching the right data from the server for the current UI
+• Deciding which parts of that data to show to the user || Control the info we put on page
+• Presentation logic, such as how to display elements, which parts of the UI to show,
+how to style them, etc.
+• User interactions, such as what happens when a user clicks something or how a text
+input should be validated || save the data user type in on page
+
+It acts as the gateway between our model, which is the data that drives our
+application, and the view, which is what the user sees and interacts with.
+
+- It never changes the view. It modifies the $scope and the binding values inside html get changed accordingly.
+-
+### Capabilities
+
+After defining a func/var in controller, we have to attach it to scope to make it available to the binding var in view.
+
+
+## IIFE
+Immediately invoked function exp
+```js
+( function()  {
+
+}() );
+
+```
+
+
+## Directives List  - 
+- ng-app
+- ng-controller = "name"
+- ng-source = "{{ }}"  : to remove 404 error bcz ang has not load. The AngularJS ng-src directive is used to solve the problem where original src attribute doesn't work properly. So AngularJS ng-src directive is used and it overrides the original src attribute of an < img >  element. The ng-src directive should be used instead of src when you have AngularJS code inside the src value
+
+
+
+## HTTP Service
+
+```js
+
+var PersonController  =function ($scope, $http){
+        var promise = $http.get("/user/12345")
+          promise.then(function(response){
+          $scope.user = response.data;
+        })
+}	
+
+// OR 
+
+var PersonController = function($scope, $http){
+      $http.get("user/12345").then (function(response){
+              $scope.data = response.data;
+      });
+}
+```
+
+
+## Modules
+
+Modules means - Module pattern/Revealing module pattern / Angular modules
+**Angular modules:**
+-	provide container for controllers so that they are not global
+```js
+var app = angular.module("githubViewer",[])
+```
+
+
+```js
+(function(){
+
+	var MainController = function($scope,$http){
+	
+		$http.get("https://api.github.com/users/mathurk29")
+			.then(onUserComplete,onError);
+		var onUserComplete = function(response){
+			$scope.user = response.date;
+		};
+		var onError = function(reason){
+			$scope.error = "Could not fetch user"
+		};
+		$scope.message = "Hello NG"
+		};
+	app.controller("MainController", [ "$scope", "$http", MainController ]);
+})();
+
+```
+
+## Directives and Views
+
+**Format** expression | filter_name : parameter
+
+
+## Services
+
+Some services we have to invoke like a function, other has properties invokded using dot(.).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
