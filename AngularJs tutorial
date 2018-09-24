@@ -1,0 +1,369 @@
+# Angular JS tutorial
+
+## Directives
+AngularJS directives are **HTML attributes** with an ng prefix.
+
+AngularJS extends HTML with ng-directives.
+
+The **ng-app** directive defines an AngularJS application.
+
+The **ng-model** directive binds the value of HTML controls (input, select, textarea) i.e. __UI input__ to application data.
+
+The **ng-bind** directive binds application data to the HTML view.
+
+The __ng-init__ directive initializes AngularJS application variables.
+
+```html
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="">
+  <p>Name: <input type="text" ng-model="name"></p>
+  <p ng-bind="name"></p>
+</div>
+
+</body>
+</html>
+```
+
+## Expressions
+AngularJS expressions are written inside double braces: **{{ expression }}.**  We use this instead of ng-bind.
+
+## Application
+
+-	AngularJS modules define AngularJS applications.
+
+-	AngularJS controllers control AngularJS applications.
+
+- 	The ng-app directive defines the application 
+
+- 	The ng-controller directive defines the controller.
+
+```js
+<div ng-app="myApp" ng-controller="myCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= "John";
+    $scope.lastName= "Doe";
+});
+</script>
+
+```
+## Module
+> The module is a container for the different parts of an application.
+ The module is a container for the application controllers.
+ Controllers always belong to a module.
+ 
+ A module is created by using the AngularJS function angular.module
+```js
+var app = angular.module('myApp', []);
+```
+>The "myApp" parameter refers to an HTML element in which the application will run.
+
+Now you can add controllers, directives, filters, and more to your AngularJS application.
+
+### Modules and Controllers in Files 
+
+It is common in AngularJS applications to put the module and the controllers in JavaScript files.
+In this example, "myApp.js" contains an application module definition, while "myCtrl.js" contains the controller:
+
+```html
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+{{ firstName + " " + lastName }}
+</div>
+
+<script src="myApp.js"></script>
+<script src="myCtrl.js"></script>
+
+</body>
+</html>
+```
+__myApp.js__
+```js
+var app = angular.module("myApp", []);
+```
+The [] parameter in the module definition can be used to define dependent modules.
+
+Without the [] parameter, you are not creating a new module, but retrieving an existing one.
+
+__myCtrl.js__
+```js
+app.controller("myCtrl", function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName= "Doe";
+});
+```
+## Controller
+
+```js
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= "John";
+    $scope.lastName= "Doe";
+});
+```
+
+
+## Model (Data Binding)
+
+>It is collection of data available for the application.
+The HTML container where the AngularJS application is displayed, is called the view.
+Data binding in AngularJS is the synchronization between the model and the view.
+
+```js
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstname = "John";
+    $scope.lastname = "Doe";
+});
+```
+## Controllers
+
+AngularJS controllers control the data of AngularJS applications.
+
+AngularJS controllers are regular JavaScript Objects.
+
+The ng-controller directive defines the application controller.
+
+```js
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+});
+</script>
+```
+
+Application explained:
+
+- The AngularJS application is defined by  ng-app="myApp". The application runs inside the div.
+
+-	The ng-controller="myCtrl" attribute is an AngularJS directive. It defines a controller.
+	
+-	The myCtrl function is a JavaScript function.
+
+-	AngularJS will invoke the controller with a $scope object.
+
+-	In AngularJS, $scope is the application object (the owner of application variables and functions).
+
+-	The controller creates two properties (variables) in the scope (firstName and lastName).
+
+-	The ng-model directives bind the input fields to the controller properties (firstName and lastName).
+
+A controller can also have methods (variables as functions):
+
+```js
+<div ng-app="myApp" ng-controller="personCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{fullName()}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('personCtrl', function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+    $scope.fullName = function() {
+        return $scope.firstName + " " + $scope.lastName;
+    };
+});
+</script>
+```
+## Scope
+
+The scope is the binding part between the HTML (view) and the JavaScript (controller).
+
+The scope is an **object** with the available properties and methods, can be accessed using $scope.
+
+The scope is available for both the view and the controller.
+
+When you make a controller in AngularJS, you pass the $scope object as an argument:
+
+## Filters
+
+Filters can be added in AngularJS to format data. Filters can be added to __expressions__ by using the **pipe character** |, followed by a filter.
+
+| In-built Filters  |  Description |
+--- | --- | 
+currency | Format a number to a currency format.
+date | Format a date to a specified format.
+filter | Select a subset of items from an array.
+json | Format an object to a JSON string.
+limitTo | Limits an array/string, into a specified number of elements/characters.
+lowercase | Format a string to lower case.
+number | Format a number to a string.
+orderBy | Orders an array by an expression.
+uppercase | Format a string to upper case.
+	
+
+## Services
+
+ A service is a **function or object**, that is available for, and limited to, your AngularJS application.
+ - 30 built-in services like $Location.
+ - Services are passed as arg in controller functions.
+
+ 
+ Create own Service:
+ 
+ ```js
+app.service('hexafy', function() {
+    this.myFunc = function (x) {
+        return x.toString(16);
+    }
+});
+```
+
+## HTTP Service:
+ - *The $http service is one of the most common used services in AngularJS applications.*
+ -  It has following methods:
+ 	  	.delete()
+		.get()
+		.head()
+		.jsonp()
+		.patch()
+		.post()
+		.put()
+		
+**Response** from the server is an **object** with these properties:
+| HTTP Response | Description |
+--- | --- |
+.config | the object used to generate the request.
+.data (_JSON_) | a string, or an object, carrying the response from the server.
+.headers | a function to use to get header information.
+.status | a number defining the HTTP status.
+.statusText | a string defining the HTTP status.
+
+
+
+
+
+## AngularJS Global API
+
+The AngularJS Global API is a set of global JavaScript functions for performing common tasks like:
+
+Comparing objects
+Iterating objects
+Converting data
+The Global API functions are accessed using the **angular** object.
+
+>angular.lowercase()	
+angular.uppercase()
+angular.isString()	
+angular.isNumber()  	
+
+## Include
+
+```html
+<body ng-app="">
+
+<div ng-include="'myFile.htm'"></div>
+
+</body>
+```
+
+
+## Routing
+
+The ngRoute module helps your application to become a Single Page Application.
+
+To make your applications ready for routing, you must include the AngularJS Route module:
+
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+```
+Then you must add the ngRoute as a __dependency__ in the application module:
+
+```js
+var app = angular.module("myApp", ["ngRoute"]);
+```
+Now your application has access to the route module, which provides the $routeProvider.
+
+Use the $routeProvider to configure different routes in your application:
+
+This container is the ng-view directive. Your application needs a container to put the content provided by the routing.
+
+We can define a view using any of the following:
+```html
+<div ng-view></div>
+<ng-view></ng-view>
+<div class="ng-view"></div>
+```
+
+> Applications can only have one ng-view directive, and this will be the placeholder for all views provided by the route.
+
+**$routeProvider** 
+```js
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "main.htm"
+    })
+    .when("/london", {
+        templateUrl : "london.htm"
+    })
+    .when("/paris", {
+        templateUrl : "paris.htm"
+    });
+});
+```
+
+Define the $routeProvider using the __config__ method of your application. Work registered in the config method will be performed when the application is loading.
+
+With the $routeProvider you can also define a controller for each "view".
+
+```js
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "main.htm"
+    })
+    .when("/london", {
+        templateUrl : "london.htm",
+        controller : "londonCtrl"
+    })
+    .when("/paris", {
+        templateUrl : "paris.htm",
+        controller : "parisCtrl"
+    });
+});
+app.controller("londonCtrl", function ($scope) {
+    $scope.msg = "I love London";
+});
+app.controller("parisCtrl", function ($scope) {
+    $scope.msg = "I love Paris";
+});
+```
+
+
