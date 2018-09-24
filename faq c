@@ -1,0 +1,243 @@
+# FAQ C
+
+**Write a C program to print “Geeks for Geeks” without using a semicolon**
+```
+#include<stdio.h>
+int main()
+{   
+   // ASCII value of ; is 59
+   if (printf("%c", 59))
+   {
+   }
+}
+
+//Using if condition:
+#include<stdio.h>
+int main()
+{
+      if (printf("Geeks for Geeks") )
+      {    }
+}   
+
+
+//Using while condition:
+
+#include<stdio.h>
+int main(){
+    while (!printf( "Geeks for Geeks" ))
+    {   }
+}
+
+
+//Using switch case:
+#include<stdio.h>
+int main(){
+    switch (printf("Geeks for Geeks" ))
+    {   }
+}
+
+
+//Using Macros:
+#include<stdio.h>
+#define PRINT printf("Geeks for Geeks")
+int main()
+{
+    if (PRINT)
+    {    }
+}
+
+```
+
+**Palindrome == Malayalam**
+
+# Recusive Implementation:
+
+```
+// A recursive function that
+// check a str[s..e] is
+// palindrome or not.
+bool isPalRec(char str[], 
+              int s, int e)
+{
+    // If there is only one character
+    if (s == e)
+    return true;
+ 
+    // If first and last
+    // characters do not match
+    if (str[s] != str[e])
+    return false;
+ 
+    // If there are more than 
+    // two characters, check if 
+    // middle substring is also 
+    // palindrome or not.
+    if (s < e + 1)
+    return isPalRec(str, s + 1, e - 1);
+ 
+    return true;
+}
+```
+**Pascal's Trianlgle**
+
+
+/* ALGO:
+
+C(line, i)   = line! / ( (line-i)! * i! )
+C(line, i-1) = line! / ( (line - i + 1)! * (i-1)! )
+We can derive following expression from above two expressions.
+C(line, i) = C(line, i-1) * (line - i + 1) / i
+
+So C(line, i) can be calculated from C(line, i-1) in O(1) time
+
+             ####### C = C * (line - i) / i;  #########
+```
+*/
+// A O(n^2) time and O(1) extra space function for Pascal's Triangle
+void printPascal(int n)
+{
+  for (int line = 1; line <= n; line++)
+  {
+    int C = 1;  // used to represent C(line, i)
+    for (int i = 1; i <= line; i++)  
+    {
+      printf("%d ", C);  // The first value in a line is always 1
+      C = C * (line - i) / i;  
+    } // in the end C will again become 1
+    printf("\n");
+  }
+}
+```
+
+
+
+1 
+1 1 
+1 2 1 
+1 3 3 1 
+1 4 6 4 1
+
+
+**ANAGRAMS**
+```
+/* function to check whether two strings are anagram of 
+   each other */
+   
+   NO_OF_CHARS = 256
+   
+bool areAnagram(char *str1, char *str2)
+{
+    // Create a count array and initialize all values as 0
+    int count[NO_OF_CHARS] = {0};
+    int i;
+ 
+    // For each character in input strings, increment count in
+    // the corresponding count array
+    for (i = 0; str1[i] && str2[i];  i++)
+    {
+        count[str1[i]]++;
+        count[str2[i]]--;
+    }
+ 
+    // If both strings are of different length. Removing this condition
+    // will make the program fail for strings like "aaca" and "aca"
+    if (str1[i] || str2[i])
+      return false;
+ 
+    // See if there is any non-zero value in count array
+    for (i = 0; i < NO_OF_CHARS; i++)
+        if (count[i])
+            return false;
+     return true;
+}
+```
+
+**Lagrange's Four square Algo**
+```
+void printFourSquares(int a)
+{
+    // loops checking the sum of squares
+    for (int i = 0; i * i <= a; i++) {
+        for (int j = i; j * j <= a; j++) {
+            for (int k = j; k * k <= a; k++) {
+                for (int l = k; l * l <= a; l++) {
+
+                    // if sum of four squares equals 
+                    // the given no.
+                    if (i * i + j * j + k * k + l * l == a) {
+
+                        // printing the numbers
+                        cout << a << " = " << i << "*" << i
+                            << " + " << j << "*" << j << " + ";
+                        cout << k << "*" << k << " + " 
+                             << l << "*" << l << "\n";
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+
+### Static in C
+
+1. Unlike global functions in C, access to static functions is restricted to the file where they are declared. 
+2. Another reason for making functions static can be reuse of the same function name in other files.
+3. Static variables can only be initialized using constant literals
+
+
+Memory leak occurs when programmers create a memory in heap and forget to delete it. 
+
+
+
+## Malloc vs Calloc
+
+[image — imgbb.com](https://ibb.co/h87fme)
+
+
+## Memory Leak
+
+ Memory leak occurs when programmers create a memory in heap and forget to delete it. Memory leaks are particularly serious issues for programs like daemons and servers which by definition never terminate.
+ 
+ /* Return without freeing ptr*/
+ 
+ 
+ ## Static func
+ 
+ when we want to restrict access to functions, we make them static.
+ 
+ In C, functions are global by default. The “static” keyword before a function name makes it static. Unlike global functions in C, access to static functions is restricted to the file where they are declared.
+
+## Reference vs Pointers
+
+References are less powerful than pointers
+1) Once a reference is created, it cannot be later made to reference another object; it cannot be reseated. This is often done with pointers.
+2) References cannot be NULL. Pointers are often made NULL to indicate that they are not pointing to any valid thing.
+3) A reference must be initialized when declared. There is no such restriction with pointers
+
+References in C++ cannot be used for implementing data structures like Linked List, Tree, etc
+
+
+**References are safer and easier to use:**
+
+1) Safer: Since references must be initialized, wild references like wild pointers are unlikely to exist. It is still possible to have references that don’t refer to a valid location (See questions 5 and 6 in the below exercise )
+2) Easier to use: References don’t need dereferencing operator to access the value. They can be used like normal variables. ‘&’ operator is needed only at the time of declaration. Also, members of an object reference can be accessed with dot operator (‘.’), unlike pointers where arrow operator (->) is needed to access members.
+
+## Virtual Func
+
+What are virtual functions – Write an example? 
+Virtual functions are used with inheritance, they are called according to the type of object pointed or referred, not according to the type of pointer or reference. In other words, virtual functions are resolved late, at runtime. Virtual keyword is used to make a function virtual.
+
+Following things are necessary to write a C++ program with runtime polymorphism (use of virtual functions)
+1) A base class and a derived class.
+2) A function with same name in base class and derived class.
+3) A pointer or reference of base class type pointing or referring to an object of derived class.
+
+
+## Poly
+
+Run Time Polymorphism: Run time polymorphism is supported by virtual functions
+
+
+
