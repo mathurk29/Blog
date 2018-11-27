@@ -1,0 +1,433 @@
+
+{
+	
+		"filename": "",
+		"operating_systems":[
+			"win2k12","Win2k16"
+			],
+			
+		"products": {
+			"roms":[
+			"u30","I42"
+			]
+			},
+			"id":{
+			"product":"cfa8fbdb2f4a4c81b7b1ee3f89f284e0",
+			"version":"82c99cf172ae45878d74fc8d12c659b"
+			},
+			
+			"category": {
+			"description": [
+				{
+					"lang": "en",
+					"category": "Driver - Network"
+				},
+				{
+					"lang": "cn",
+					"category": "驱动程序 - 网络"
+				},
+				{
+					"lang": "ja",
+					"category": "ドライバ - ネットワーク"
+				},
+				{
+					"lang": "ko",
+					"category": "드라이버 – 네트워크"
+				},
+				{
+					"lang": "tw",
+					"category": "驅動程式 ─ 網路"
+				}
+			],
+			"key": "11300095"
+		},
+			
+		"name": [
+			
+				{
+					"lang": "en",
+					"name": "Online ROM Flash Component for Windows x64 - HPE ProLiant DL380 Gen10",
+					"alt_name":""
+				},
+				{
+					"lang": "cn",
+					"name": "",
+					"alt_name":""
+				},
+				{
+					"lang": "ja",
+					"name": "",
+					"alt_name":""
+				},
+				{
+					"lang": "ko",
+					"name": "Windows x64용 온라인 ROM 플래시 구성 요소 - HPE ProLiant DL380 Gen10 (U30) 서버",
+					"alt_name":""
+				},
+				{
+					"lang": "tw",
+					"name": "適用於 Windows x64 的線上 ROM 更新元件 - HPE ProLiant DL380 Gen10 (U30) 伺服器",
+					"alt_name":""
+				}
+			
+		],
+			"version": {
+			"value": "1.40_04-20-2018",
+			"revision": "",
+			"type_of_change": "0"
+			
+		},
+		"manufacturer_name": [		
+			
+				{
+					"lang": "en",
+					"manufacturer_name": "Hewlett Packard Enterprise"
+				},
+				{
+					"lang": "cn",
+					"manufacturer_name": "惠普企业"
+				},
+				{
+					"lang": "ja",
+					"manufacturer_name": "Hewlett Packard Enterprise"
+				},
+				{
+					"lang": "ko",
+					"manufacturer_name": "Hewlett Packard Enterprise"
+				},
+				{
+					"lang": "tw",
+					"manufacturer_name": "Hewlett Packard Enterprise"
+				}
+			
+		],
+			"release_date": "2018-04-30T12:00:00+00:00",
+		
+		"description": [
+			
+				{
+					"lang": "en",
+					"description": "This component provides updated system firmware that can be installed directly on supported Operating Systems. Additionally, when used in conjunction with Smart Update Manager (SUM), this Component allows the user to update firmware on remote servers from a central location. This remote deployment capability eliminates the need for the user to be physically present at the server in order to perform a firmware update."
+				},
+				{
+					"lang": "cn",
+					"description": "This component provides updated system firmware that can be installed directly on supported Operating Systems. Additionally, when used in conjunction with Smart Update Manager (SUM), this Component allows the user to update firmware on remote servers from a central location. This remote deployment capability eliminates the need for the user to be physically present at the server in order to perform a firmware update."
+				},
+				{
+					"lang": "ja",
+					"description": "このコンポーネントは、サポートされるオペレーティングシステム上で直接インストール可能なアップデートされたシステムファームウェアを提供します。さらに、Smart Update Manager (SUM) と共に使用する場合、このコンポーネントは、ユーザーが中央からリモートサーバーのファームウェアをアップデートすることを可能にします。このリモート展開機能により、ファームウェアをアップデートするためにユーザーがサーバーへ物理的に移動する必要がなくなります。"
+				},
+				{
+					"lang": "ko",
+					"description": "This component provides updated system firmware that can be installed directly on supported Operating Systems. Additionally, when used in conjunction with Smart Update Manager (SUM), this Component allows the user to update firmware on remote servers from a central location. This remote deployment capability eliminates the need for the user to be physically present at the server in order to perform a firmware update."
+				},
+				{
+					"lang": "tw",
+					"description": "This component provides updated system firmware that can be installed directly on supported Operating Systems. Additionally, when used in conjunction with Smart Update Manager (SUM), this Component allows the user to update firmware on remote servers from a central location. This remote deployment capability eliminates the need for the user to be physically present at the server in order to perform a firmware update."
+				}
+			],
+			"prerequisite_notes": 	[
+			{
+				"description": "<p>The &quot;iLO 5 Channel Interface Driver&rdquo; (CHIF) for Windows which is available from Service Pack for ProLiant (SPP).</p>\n",
+				"lang": "en"
+			},
+			{
+				"description": "<p>The &quot;iLO 5 Channel Interface Driver&rdquo; (CHIF) for Windows which is available from Service Pack for ProLiant (SPP).</p>\n",
+				"lang": "cn"
+			},
+			{
+				"description":"<p>The &quot;iLO 5 Channel Interface Driver&rdquo; (CHIF) for Windows which is available from Service Pack for ProLiant (SPP).</p>\n",
+				"lang": "ja"
+			},
+			{
+				"description":"<p>The &quot;iLO 5 Channel Interface Driver&rdquo; (CHIF) for Windows which is available from Service Pack for ProLiant (SPP).</p>\n",
+				"lang": "ko"
+			},
+			{
+			    "description":"<p>The &quot;iLO 5 Channel Interface Driver&rdquo; (CHIF) for Windows which is available from Service Pack for ProLiant (SPP).</p>\n",
+				"lang": "tw"
+			}
+		],
+			"installation_notes":  [
+			{
+				"description": "<p>To update firmware from Windows operating system on target server:</p>\n\n<p>1.&nbsp;&nbsp;&nbsp;&nbsp; Place the Component in a temporary directory.<br />\n2.&nbsp;&nbsp;&nbsp;&nbsp; From the same directory, run the Component by double-clicking it.<br />\n3.&nbsp;&nbsp;&nbsp;&nbsp; When the Component dialog window displays, click the Install button to initiate the firmware upgrade.<br />\n4.&nbsp;&nbsp;&nbsp;&nbsp; Reboot your system if you would like the update to take effect immediately.</p>\n\n<p><br />\n&nbsp;<strong>Supplemental updates</strong> for supported ProLiant servers and options can be done by using&nbsp;Smart Update Manager, which is found on the Service Pack for ProLiant ISO.</p>\n\n<ul>\n\t<li>Place the Service Pack for ProLiant on a USB key using the USB Key Creator Utility.</li>\n\t<li>Place the desired&nbsp;components&nbsp;to be updated in the directory, \\packages on the USB key.</li>\n</ul>\n\n<p>Update the firmware and software&nbsp;in the usual manner.&nbsp;<br />\n&nbsp;</p>\n\n<p>This component can only be executed on Windows x64.</p>\n",				
+				"lang": "en"
+			},
+			{
+				"description":"<p>To update firmware from Windows operating system on target server:</p>\n\n<p>1.&nbsp;&nbsp;&nbsp;&nbsp; Place the Component in a temporary directory.<br />\n2.&nbsp;&nbsp;&nbsp;&nbsp; From the same directory, run the Component by double-clicking it.<br />\n3.&nbsp;&nbsp;&nbsp;&nbsp; When the Component dialog window displays, click the Install button to initiate the firmware upgrade.<br />\n4.&nbsp;&nbsp;&nbsp;&nbsp; Reboot your system if you would like the update to take effect immediately.</p>\n\n<p><br />\n&nbsp;<strong>Supplemental updates</strong> for supported ProLiant servers and options can be done by using&nbsp;Smart Update Manager, which is found on the Service Pack for ProLiant ISO.</p>\n\n<ul>\n\t<li>Place the Service Pack for ProLiant on a USB key using the USB Key Creator Utility.</li>\n\t<li>Place the desired&nbsp;components&nbsp;to be updated in the directory, \\packages on the USB key.</li>\n</ul>\n\n<p>Update the firmware and software&nbsp;in the usual manner.&nbsp;<br />\n&nbsp;</p>\n\n<p>This component can only be executed on Windows x64.</p>\n",
+				"lang": "cn"
+			}
+		
+		],
+		
+	"revision_history": [
+			{
+				"version": {
+					"value": "1.40_04-20-2018",
+					"revision": "",
+					"type_of_change": "0"
+				           },
+				"revision_enhancements": [
+					{
+						"description": "Added support for the latest VMware vSphere Secure Boot Certificate.<p>Added support to decode certain Machine Check Exceptions to a specific failing PCIe device. Previous versions of the System ROM would log a generic Machine Check event to the Integrated Management Log (IML) for these error events.<p>Added a new BIOS/Platform Configuration (RBSU) Memory Controller Interleaving menu. This option allows disabling memory controller interleaving which may improve memory performance for systems configured with an unbalanced memory configuration.<p>Added a new BIOS/Platform Configuration (RBSU) Processor Jitter Control Optimization menu for Jitter Smoothing Support. This new optimization setting allows customers to choose between optimizing Auto-tuned mode for maximum throughput performance, low latency, or the default - zero latency.<p>Updated the RESTful API HPE BIOS Attribute Registry resources to match the latest BIOS/Platform Configuration options.<p>Updated the language translations (non-English modes) for System Utilities.",
+						"lang": "en"
+					},
+					{
+						"description": "Added support for the latest VMware vSphere Secure Boot Certificate.<p>Added support to decode certain Machine Check Exceptions to a specific failing PCIe device. Previous versions of the System ROM would log a generic Machine Check event to the Integrated Management Log (IML) for these error events.<p>Added a new BIOS/Platform Configuration (RBSU) Memory Controller Interleaving menu. This option allows disabling memory controller interleaving which may improve memory performance for systems configured with an unbalanced memory configuration.<p>Added a new BIOS/Platform Configuration (RBSU) Processor Jitter Control Optimization menu for Jitter Smoothing Support. This new optimization setting allows customers to choose between optimizing Auto-tuned mode for maximum throughput performance, low latency, or the default - zero latency.<p>Updated the RESTful API HPE BIOS Attribute Registry resources to match the latest BIOS/Platform Configuration options.<p>Updated the language translations (non-English modes) for System Utilities.",
+						"lang": "cn"
+					}
+					
+				],
+				"revision_fixes": [
+					{
+						"description": "<P><B>Important Notes:</B></P>None<P><B>Firmware Dependencies:</B></P>None<P><B>Problems Fixed:</B></P>Addressed an issue where systems may experience an 389-Unexpected Shutdown and Restart, logged in the iLO Integrated Management Log, when processor c-states are enabled. This issue is not unique to HPE servers.<p>Addressed an issue where Server Platform Services (SPS) Firmware updates and Innovation Engine (IE) Firmware updates may take an excessive amount of time to complete. This issue also requires Integrated Lights-Out (iLO) Firmware  version 1.20 or later to see the improved flash times.<p>Addressed an issue where the Embedded Diagnostics may not launch properly when the UEFI POST Discovery Mode option is set to Force Fast Discovery.<p>Addressed an issue where the Integrated Management Log (IML) Viewer in the System Utilities menu may become unresponsive when launched.<p>Addressed an issue where a system configured for HPE Scalable Persistent Memory may not properly log a backup failure event to the Integrated Management Log (IML).<p>Addressed an issue where the HPE Dual SD Card USB Module may not boot properly when the UEFI POST Discovery Mode option is set to Force Fast Discovery.<p>Addressed an issue where the Trusted Platform Module (TPM) Firmware update may not complete properly when the TPM is configured for TPM 2.0 Mode. This issue does not impact systems configured with a TPM operating in TPM 1.2 mode.<p>Addressed an issue where the system may not be able to boot to Intelligent Provisioning when a third party USB Key was installed in one of the server USB Ports.  This issue was seen with a specific USB Key and has not been seen with other devices.<p>Addressed an issue where Integrated Lights-Out (iLO) Virtual Media may not boot properly when the UEFI POST Discovery Mode option is set to Force Full Discovery.<p>Addressed an issue where the system may become unresponsive during POST or experience a Red Screen on the next boot following an I/O Machine Check Failure at runtime.<p>Addressed an issue where a system configured with the internal SD Card disabled from BIOS/Platform Configuration (RBSU) and an HPE Dual SD card installed would not boot from the HPE Dual SD card USB Module when configured in Legacy Boot Mode. This issue does not impact systems configured in UEFI Boot Mode.<p>Addressed an issue where a system configured with an optional HPE CN1200E-T adapter would not boot properly when configured in Legacy Boot Mode. This issue does not impact systems configured in UEFI Boot Mode.<p>Addressed an issue where systems configured with HPE s100i Software RAID may experience a failed RAID volume on a system reset.<p>Addressed an issue where systems configured for Scalable Persistent Memory may not function properly after changing certain BIOS/Platform Configuration (RBSU) Settings such as Intel TXT support.  Previously these configuration changes could have led to a loss of persistent data.<P><B>Known Issues:</B></P>None",
+						"lang": "en"
+					},
+					{
+						"description": "<P><B>Important Notes:</B></P>None<P><B>Firmware Dependencies:</B></P>None<P><B>Problems Fixed:</B></P>Addressed an issue where systems may experience an 389-Unexpected Shutdown and Restart, logged in the iLO Integrated Management Log, when processor c-states are enabled. This issue is not unique to HPE servers.<p>Addressed an issue where Server Platform Services (SPS) Firmware updates and Innovation Engine (IE) Firmware updates may take an excessive amount of time to complete. This issue also requires Integrated Lights-Out (iLO) Firmware  version 1.20 or later to see the improved flash times.<p>Addressed an issue where the Embedded Diagnostics may not launch properly when the UEFI POST Discovery Mode option is set to Force Fast Discovery.<p>Addressed an issue where the Integrated Management Log (IML) Viewer in the System Utilities menu may become unresponsive when launched.<p>Addressed an issue where a system configured for HPE Scalable Persistent Memory may not properly log a backup failure event to the Integrated Management Log (IML).<p>Addressed an issue where the HPE Dual SD Card USB Module may not boot properly when the UEFI POST Discovery Mode option is set to Force Fast Discovery.<p>Addressed an issue where the Trusted Platform Module (TPM) Firmware update may not complete properly when the TPM is configured for TPM 2.0 Mode. This issue does not impact systems configured with a TPM operating in TPM 1.2 mode.<p>Addressed an issue where the system may not be able to boot to Intelligent Provisioning when a third party USB Key was installed in one of the server USB Ports.  This issue was seen with a specific USB Key and has not been seen with other devices.<p>Addressed an issue where Integrated Lights-Out (iLO) Virtual Media may not boot properly when the UEFI POST Discovery Mode option is set to Force Full Discovery.<p>Addressed an issue where the system may become unresponsive during POST or experience a Red Screen on the next boot following an I/O Machine Check Failure at runtime.<p>Addressed an issue where a system configured with the internal SD Card disabled from BIOS/Platform Configuration (RBSU) and an HPE Dual SD card installed would not boot from the HPE Dual SD card USB Module when configured in Legacy Boot Mode. This issue does not impact systems configured in UEFI Boot Mode.<p>Addressed an issue where a system configured with an optional HPE CN1200E-T adapter would not boot properly when configured in Legacy Boot Mode. This issue does not impact systems configured in UEFI Boot Mode.<p>Addressed an issue where systems configured with HPE s100i Software RAID may experience a failed RAID volume on a system reset.<p>Addressed an issue where systems configured for Scalable Persistent Memory may not function properly after changing certain BIOS/Platform Configuration (RBSU) Settings such as Intel TXT support.  Previously these configuration changes could have led to a loss of persistent data.<P><B>Known Issues:</B></P>None",
+						"lang": "cn"
+					}
+		
+				]
+			},
+			{
+				"version": {
+					"value": "1.36_02-15-2018",
+					"revision": "",
+					"type_of_change": "0"
+				},
+				"revision_enhancements": [
+					{
+						"description": "Added new Storage Information page to the System Information section of System Utilities.<p>Added a new BIOS/Platform Configuration (RBSU) Advanced PCIe Configuration option for PCIe Bifurcation of PCI Express Slots. When enabled, this option will bifurcate a PCIe slot into two equal width slots.  This option is used for certain PCIe option cards that support/require bifurcation.<p>Added a new BIOS/Platform Configuration (RBSU) Power and Performance option for Direct to UPI. When Enabled, this option can provide a performance benefit in multi-processor configured systems that are reliant on the UPI bus for remote memory or I/O accesses.<p>Added a new BIOS/Platform Configuration (RBSU) Thermal Configuration option for Enhanced CPU Cooling. When running certain processor intensive workloads, this option can provide additional cooling to the processors which can result in improved performance. <p>Added a new System Utilities option for Embedded Diagnostics. To take advantage of this feature, the user must also update Intelligent Provisioning to version 3.10 or later.<p>Added support for the Integrated Lights-Out (iLO) virtual wheel mouse functionality in the BIOS System Utilities application. This feature also requires iLO firmware version 1.20 or later for proper support.<p>Added RESTful API configuration support for the HPE Smart Array S100i SR Gen10 SW RAID controller.<p>Improved performance with applications and configurations that are sensitive to PCIe Device I/O NUMA awareness.  This change optimally allocates the PCI Express I/O Proximity values in the ACPI System Locality Information Table (SLIT).<p>Updated the RESTful API HPE BIOS Attribute Registry resources to match the latest BIOS/Platform Configuration options.<p>Updated the language translations (non-English modes) for System Utilities.",
+						"lang": "en"
+					},
+					{
+						"description": "Added new Storage Information page to the System Information section of System Utilities.<p>Added a new BIOS/Platform Configuration (RBSU) Advanced PCIe Configuration option for PCIe Bifurcation of PCI Express Slots. When enabled, this option will bifurcate a PCIe slot into two equal width slots.  This option is used for certain PCIe option cards that support/require bifurcation.<p>Added a new BIOS/Platform Configuration (RBSU) Power and Performance option for Direct to UPI. When Enabled, this option can provide a performance benefit in multi-processor configured systems that are reliant on the UPI bus for remote memory or I/O accesses.<p>Added a new BIOS/Platform Configuration (RBSU) Thermal Configuration option for Enhanced CPU Cooling. When running certain processor intensive workloads, this option can provide additional cooling to the processors which can result in improved performance. <p>Added a new System Utilities option for Embedded Diagnostics. To take advantage of this feature, the user must also update Intelligent Provisioning to version 3.10 or later.<p>Added support for the Integrated Lights-Out (iLO) virtual wheel mouse functionality in the BIOS System Utilities application. This feature also requires iLO firmware version 1.20 or later for proper support.<p>Added RESTful API configuration support for the HPE Smart Array S100i SR Gen10 SW RAID controller.<p>Improved performance with applications and configurations that are sensitive to PCIe Device I/O NUMA awareness.  This change optimally allocates the PCI Express I/O Proximity values in the ACPI System Locality Information Table (SLIT).<p>Updated the RESTful API HPE BIOS Attribute Registry resources to match the latest BIOS/Platform Configuration options.<p>Updated the language translations (non-English modes) for System Utilities.",
+						"lang": "cn"
+					},
+				],
+				"revision_fixes": [
+					{
+						"description": "<P><B>Important Notes:</B></P>None<P><B>Firmware Dependencies:</B></P>None<P><B>Problems Fixed:</B></P>Addressed an issue where the UEFI Boot Order would not get reset to a default value when loading a default configuration. This issue does not impact systems configured in Legacy Boot Mode.  <p>Addressed an issue where the High Performance Event Timer (HPET) may not function properly under an Operating System. This was typically seen under a Windows Operating System where the HPET was reported as not functioning properly in Windows Device Manager.<p>Addressed an issue where the Embedded Serial Port option could not be properly configured through the RESTful Interface.<p>Addressed an issue where the PCI Express I/O Proximity values were not properly allocated in the ACPI System Locality Information Table (SLIT). This change may help provide a performance benefit in applications and configurations that are sensitive to PCIe Device I/O NUMA awareness.<p>Addressed a rare issue where the system may become unresponsive when a SAS drive was inserted with the HPE Smart Array S100i SR Gen10 SW RAID enabled. This issue does not impact systems configured in AHCI mode.<p>Addressed an issue where the system may experience an erroneous boot-time message and Integrated Management Log (IML) entry stating that Core Boost Technology is disabled due to a lack of an iLO Advanced License (531 - Core Boost Technology missing required iLO License) when using the Version 1.20 System ROM.  This issue does NOT occur with the Version 1.00 or Version 1.22 System ROM.  Note that this IML entry is only valid for servers using the Intel Xeon Scalable 6143 processor.  If the message and IML entry are received with any other processor model installed, the message is erroneous and can be ignored without any negative impact to the system.<P><B>Known Issues:</B></P>None",
+						"lang": "en"
+					},
+					{
+						"description": "<P><B>Important Notes:</B></P>None<P><B>Firmware Dependencies:</B></P>None<P><B>Problems Fixed:</B></P>Addressed an issue where the UEFI Boot Order would not get reset to a default value when loading a default configuration. This issue does not impact systems configured in Legacy Boot Mode.  <p>Addressed an issue where the High Performance Event Timer (HPET) may not function properly under an Operating System. This was typically seen under a Windows Operating System where the HPET was reported as not functioning properly in Windows Device Manager.<p>Addressed an issue where the Embedded Serial Port option could not be properly configured through the RESTful Interface.<p>Addressed an issue where the PCI Express I/O Proximity values were not properly allocated in the ACPI System Locality Information Table (SLIT). This change may help provide a performance benefit in applications and configurations that are sensitive to PCIe Device I/O NUMA awareness.<p>Addressed a rare issue where the system may become unresponsive when a SAS drive was inserted with the HPE Smart Array S100i SR Gen10 SW RAID enabled. This issue does not impact systems configured in AHCI mode.<p>Addressed an issue where the system may experience an erroneous boot-time message and Integrated Management Log (IML) entry stating that Core Boost Technology is disabled due to a lack of an iLO Advanced License (531 - Core Boost Technology missing required iLO License) when using the Version 1.20 System ROM.  This issue does NOT occur with the Version 1.00 or Version 1.22 System ROM.  Note that this IML entry is only valid for servers using the Intel Xeon Scalable 6143 processor.  If the message and IML entry are received with any other processor model installed, the message is erroneous and can be ignored without any negative impact to the system.<P><B>Known Issues:</B></P>None",
+						"lang": "cn"
+					}
+					
+				]
+			}
+			
+			
+		],
+
+				
+		"sw_keys": [
+		             {
+					"sw_key_expectedpath": "firmware:system",
+					"guid": "",
+					"name": "U30"
+				      }
+			
+		],
+		"files": {
+		
+				"file": [
+					"ilo_670.10.1.0.16-1OEM.670.0.0.7535516.vib",
+					"hponcfg-6.7.0.5.3-0.2.7535516.vib",
+					"conrep-6.7.0.03-02.00.1.7535516.vib",
+					"cru_670.6.7.10.14-1OEM.670.0.0.7535516.vib",
+					"testevent-6.7.0.02-00.01.12.7535516.vib",
+					"bootcfg-6.7.0.02-05.00.4.7535516.vib",
+					"ssacli-3.30.14.0-6.7.0.vib"
+				],
+			"name": "cp036014.zip",
+			"version": "2018.11.01",
+			"size": "10MB",
+			"release": "",
+			"bytes": "10650980",
+			"md5sum": "5bcff8e614b0e432e96853cb83982e74",
+			"sha1sum": "87980a28082715e99db9a982594ec2d03701ad84"
+		},
+		
+	"VibMetaData": {
+			"vibList": [
+				{
+					"summary": "",
+					"softwareTags": [
+							{
+						"tag": ""
+							}
+					],
+					"systemReqs": {
+						"swPlatform": {
+							"version": "",
+							"locale": "",
+							"productLineID": ""
+						},
+						"maintenanceMode": ""
+					},
+					"vibVersion": "",
+					"vendor": "",
+					"relationships": {
+						"replaces": "",
+						"conflicts": "",
+						"provides": "",
+						"compatibleWith": "",
+						"depends": ""
+					},
+					"vibFile": {
+						"packedSize": "7088054",
+						"checksum": {
+							"checksumType": "sha-256",
+							"checksum": "b7b2bd032f00b67bbba03ccdf7aa6b9c24e235e10cbd2ec004cb75a3791e9ae1"
+						},
+						"relativePath": "sut-6.0.0.2.3.6.0-6.vib",
+						"source_url": ""
+					},
+					"vibID": "",
+					"name": "sut",
+					"vibType": "",
+					"postInstall": {
+						"hostdRestart": "",
+						"rebootRequired": ""
+					},
+					"version": "6.0.0.2.3.6.0-6"
+					}
+				
+			]
+		},
+		"payload": {
+			"DeviceClass": "aa148d2e-6e09-453e-bc6f-63baa5f5ccc4",
+			"Devices": {
+				"Device": {
+					"DeviceName": "System BIOS - U30",
+					"FirmwareImages": {
+						"DelayAfterInstallSec": 0,
+						"DirectFlashOk": true,
+						"FileName": "U30_1.40_04_20_2018.signed.flash",
+						"InstallDurationSec": 120,
+						"Order": 1,
+						"ResetRequired": true,
+						"Type": "Firmware",
+						"UefiFlashable": true
+					},
+					"Target": "00000000-0000-0000-0000-000000000205",
+					"Version": "v1.40 (04/20/2018)"
+				}
+			},
+			"Type": "Firmware",
+			"UpdatableBy": [
+				"Uefi",
+				"RuntimeAgent"
+			]
+		},
+		"upgrade_requirement":"critical",
+		"prerequisites": {
+			"supported_operating_systems": [
+				
+					{
+						"platform": "nt_x86-64",
+						"major": 10,
+						"minor": 0,
+						"sr": "OEM",
+						"minimumbuild":"",
+						"name": "Microsoft Windows Server 2016"
+					},
+					{
+						"platform": "nt_x86-64",
+						"major": 6,
+						"minor": 3,
+						"sr": "OEM",
+						"minimumbuild":"",
+						"name": "Microsoft Windows Server 2012 R2"
+					}
+				],
+			"supported_devices":[
+			{
+				"supported_device":  [
+						{
+							"name": "ven",
+							"text": "14E4"
+						},
+						{
+							"name": "dev",
+							"text": "1665"
+						},
+						{
+							"name": "subven",
+							"text": "103C"
+						},
+						{
+							"name": "subdev",
+							"text": "22BD"
+						}
+					],
+					"type": "pci"
+				
+			}
+			
+		     ],
+		  "supported_platforms": {
+		"roms": [
+			 "A40","U40","U41","U34"
+				]
+	       },
+			"required_diskspace": {
+				"size_kb": 11000
+			}
+		},
+		"installation": {
+			"install": {
+				"install_caps": {
+					"silent": "yes",
+					"needuseracct": "no"
+				},
+				"command": "cpqsetup.exe",
+				"command_params": "",
+				"reboot_required": {
+					"value": "yes"
+				},
+				"reboot_details": {
+				   "description":[
+						{
+							"lang": "en",
+							"reboot_details": "Reboot is required after installation for updates to take effect and hardware stability to be maintained."
+						},
+						{
+							"lang": "cn",
+							"reboot_details": "安装之后必须重启才能使更新生效并保持硬件稳定性。"
+						},
+						{
+							"lang": "ja",
+							"reboot_details": "アップデートの効果とハードウェアの安定を得るために、インストール後の再起動は必要です。"
+						},
+						{
+							"lang": "ko",
+							"reboot_details": "업데이트가 적용되고 하드웨어 안정성이 유지되려면 설치 후 재부팅해야 합니다."
+						},
+						{
+							"lang": "tw",
+							"reboot_details": "安裝後必須重新啟動，更新才會生效，並維持硬體穩定。"
+						}
+					
+					],
+					"value": "Required"
+				},
+				
+				"per_device_install_time_seconds": 0
+			},
+			"uninstall": {
+				"uninstall_caps": {
+					"silent": "no"
+				},
+				"command": "",
+				"command_params": "",
+				"reboot_required": {
+					"value": "no" 
+				}
+			}
+		},
+		"version": "2.0.1.0" 
+	}
